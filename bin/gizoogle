@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'gizoogle'
+
+if $stdin.tty?
+  str = ARGV.join(' ')
+  puts Gizoogle::String.translate(str) if str.length > 0
+else
+  str = $stdin.readlines.join(' ')
+  puts Gizoogle::String.translate(str) if str.length > 0
+end
