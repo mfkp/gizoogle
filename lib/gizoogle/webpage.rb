@@ -16,9 +16,8 @@ module Gizoogle
       params = { 'search' => url }
       url = URI('http://www.gizoogle.net/tranzizzle.php')
       url.query = URI.encode_www_form(params)
-      body = Net::HTTP.get(url)
-
-      body
+      
+      Net::HTTP.get(url)
     end
   end
 end
